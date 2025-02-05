@@ -71,6 +71,13 @@ Architecture is flexible enough to allow for edge deployments within tight cloud
 
 If we were just to make a request and view the response and at the bottom we'll be managing our backend service through tyke
 
+## Developer Portal
+- Bootstrap developer portal
+- Publish a configured API
+- As an API developer:
+   - Request a key
+   - Send a request
+   - View analytics
 
 
 
