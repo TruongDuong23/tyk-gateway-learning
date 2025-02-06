@@ -78,7 +78,27 @@ If we were just to make a request and view the response and at the bottom we'll 
    - Request a key
    - Send a request
    - View analytics
+ 
 
+## Cache response (caching)
+The Tyk Gateway can cache responses from your upstream services.
+
+API Clients which make subsequent requests to a cached endpoint will receive the cached response directly from the Gateway, which:
+- reduces load on the upstream service
+- provides a quicker response to the API Client (reduces latency)
+- reduces concurrent load on the API Gateway
+  
+Caching is best used on endpoints where responses infrequently change and are computationally expensive for the upstream service to generate.
+
+### Caching with Tyk
+Tyk uses Redis to store the cached responses and, as you’d expect from Tyk, there is lots of flexibility in how you configure caching so that you can optimize the performance of your system.
+
+There are two approaches to configure caching for an API deployed with Tyk:
+- Basic or Safe Request caching is applied at the API level for all requests for which it is safe to do so.
+- Advanced caching options can be applied at the endpoint level.
+
+### Cache Terminology and Features
+#### Cache Key
 
 
 
